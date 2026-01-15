@@ -1,4 +1,5 @@
 local SceneManager = require("src.scene_manager")
+local VERSION = require("src.version")
 local M = {}
 
 local buttons = {}
@@ -23,7 +24,8 @@ function M.enter()
 end
 
 function M.draw()
-  love.graphics.clear(0.06, 0.07, 0.10)
+  love.graphics.setColor(0.45, 0.55, 0.65)
+love.graphics.printf(VERSION.name .. " v" .. VERSION.version, 0, love.graphics.getHeight() - 24, love.graphics.getWidth(), "center")
 
   local W = love.graphics.getWidth()
 
